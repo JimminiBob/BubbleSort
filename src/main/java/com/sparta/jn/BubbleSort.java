@@ -4,17 +4,16 @@ public class BubbleSort {
     static int[] intArraySorter(int[] arrayIn) {
         int[] arrayToSort = arrayIn;
         int length = arrayIn.length;
-        boolean swapped = false;
-        do {
-            for (int i = 1; i < length - 1; i++) {
-                if (arrayToSort[i - 1] > arrayToSort[i]) {
-                    int temp = arrayToSort[i - 1];
-                    arrayToSort[i - 1] = arrayToSort[1];
-                    arrayToSort[1] = temp;
-                    swapped = true;
+
+        for (int i = 0; i < length - 1; i++) {
+            for (int j = 0; j < length - i - 1; j++) {
+                if (arrayToSort[j] > arrayToSort[j+1]) {
+                    int temp = arrayToSort[j];
+                    arrayToSort[j] = arrayToSort[j+1];
+                    arrayToSort[j+1] = temp;
                 }
             }
-        } while (!swapped);
+        }
         return arrayToSort;
     }
 }
