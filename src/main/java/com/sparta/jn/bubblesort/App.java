@@ -1,4 +1,4 @@
-package com.sparta.jn;
+package com.sparta.jn.bubblesort;
 
 import java.util.Arrays;
 

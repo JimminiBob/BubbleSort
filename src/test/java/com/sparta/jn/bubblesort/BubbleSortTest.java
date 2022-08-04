@@ -1,4 +1,4 @@
-package com.sparta.jn;
+package com.sparta.jn.bubblesort;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -38,4 +38,6 @@ public class BubbleSortTest {
         int[] expected = {-99, -32, -4, -2, -1, -1};
         Assertions.assertArrayEquals(expected, sorted);
     }
+
+
 }
