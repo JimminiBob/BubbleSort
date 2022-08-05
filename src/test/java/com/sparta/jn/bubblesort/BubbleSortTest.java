@@ -39,5 +39,21 @@ public class BubbleSortTest {
         Assertions.assertArrayEquals(expected, sorted);
     }
 
+    @Test
+    @DisplayName("Test with max integer value in array and returns a sorted away")
+    void testWithMaxIntegerValueInArrayAndReturnsASortedAway() {
+        int[] numbers = {99, 1, Integer.MAX_VALUE,4 , 2, 32, -1};
+        int[] sorted = BubbleSort.intArraySorter(numbers);
+        int[] expected = {-1, 1 , 2, 4, 32, 99, Integer.MAX_VALUE};
+        Assertions.assertArrayEquals(expected, sorted);
+    }
 
+    @Test
+    @DisplayName("Test with min integer value in an array and returns a sorted away")
+    void testWithMinIntegerValueInAnArrayAndReturnsASortedAway() {
+        int[] numbers = {99, 1, Integer.MIN_VALUE,4 , 2, 32, -1};
+        int[] sorted = BubbleSort.intArraySorter(numbers);
+        int[] expected = {Integer.MIN_VALUE, -1, 1 , 2, 4, 32, 99};
+        Assertions.assertArrayEquals(expected, sorted);
+    }
 }
