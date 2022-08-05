@@ -8,12 +8,16 @@ public class BubbleSort {
         for (int i = 0; i < length - 1; i++) {
             for (int j = 0; j < length - i - 1; j++) {
                 if (arrayOut[j] > arrayOut[j+1]) {
-                    int temp = arrayOut[j];
-                    arrayOut[j] = arrayOut[j+1];
-                    arrayOut[j+1] = temp;
+                    swapValue(arrayOut, j);
                 }
             }
         }
         return arrayOut;
+    }
+
+    private static void swapValue(int[] arrayToSwap, int j) {
+        int temp = arrayToSwap[j];
+        arrayToSwap[j] = arrayToSwap[j +1];
+        arrayToSwap[j +1] = temp;
     }
 }
